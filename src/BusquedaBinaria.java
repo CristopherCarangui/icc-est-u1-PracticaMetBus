@@ -2,18 +2,16 @@ import models.Persona;
 
 public class BusquedaBinaria {
     public static void sortByName(Persona[] personas){
-        for(int i = 0; i<personas.length-1;i++){
-            boolean swap = false;
-            for(int j = 0 ; j < personas.length-1-i;j++){
-                if(personas[j].getEdad()){
-                    Product aux = products[j];
-                    products[j] = products[j+1];
-                    products[j+1] = aux;
-                }
+         for(int i = 1 ; i<personas.length; i++){
+            Persona aux = personas[i];
+            int j = i-1;
+            while(j>=0 && personas[j].getEdad()>aux.getEdad()){
+                personas[j+1] = personas[j];
+                j--;
+
             }
-            if(!swap)
-                break;
-        }
+            personas[j+1]=aux;
+         }
     } 
     public int findByAge(Persona[] personas, int edad){
         int bajo = 0;
@@ -21,10 +19,10 @@ public class BusquedaBinaria {
         int alto = n-1;
         while(bajo<=alto){
             int medio= (bajo+alto)/2;
-            if(personas[medio].getEdad().equals(edad))
+            if(personas[medio].getEdad())
                 return medio;
             
-            int comparacion = personas[medio].getEdad.compareTo(edad);
+            int comparacion = personas[medio].getEdad);
             if(comparacion<0)
                 bajo = medio+1;
             else 
