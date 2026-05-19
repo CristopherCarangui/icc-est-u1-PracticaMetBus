@@ -1,18 +1,11 @@
-## Getting Started
+##  Universidad Politecnica Salesiana
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Practica: Metodos de Busqueda Binaria
+## Estudiante: Cristopher Carangui
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Practica 1.1: Metodos Busqueda Binaria
+### Fecha: 18/05/26
+### Descripcion:
+En este programa se realizo la busqueda por edad utilizando la busqueda binaria, el mismo lanzando un print de la lista 
+arreglada por el metodo sort insertion obteniendo la lista ya arreglada por edad y con eso llamar la funcion teniendo una clave de 18 y mostrando 
+en la consola los movimientos y los valores que se toma en bajo alto y medio.

@@ -1,7 +1,7 @@
 import models.Persona;
 
 public class BusquedaBinaria {
-    public static void sortByName(Persona[] personas){
+    public static void sortByAge(Persona[] personas){
          for(int i = 1 ; i<personas.length; i++){
             Persona aux = personas[i];
             int j = i-1;
@@ -18,19 +18,45 @@ public class BusquedaBinaria {
         int n = personas.length;
         int alto = n-1;
         while(bajo<=alto){
+            printfindByAge(personas, bajo, alto);
             int medio= (bajo+alto)/2;
-            if(personas[medio].getEdad())
+            System.out.print("bajo= " + bajo + "   ");
+            System.out.print("alto= " + alto + "   ");
+            System.out.print("Medio= " + medio + "   ");
+            System.out.print("valorMedio= " + personas[medio].getEdad() + " ");
+            if(personas[medio].getEdad() == edad){
+                System.out.println("Encontrado");
                 return medio;
-            
-            int comparacion = personas[medio].getEdad);
-            if(comparacion<0)
+            }
+            else if (personas[medio].getEdad()<edad){
                 bajo = medio+1;
-            else 
-                alto = medio-1;
+                System.out.println("--> Derecha");
+            }
+            else {
+                alto = medio -1;
+                System.out.println("-->Izquierda");
+
+            }
             
         }
         return -1;
 
+    }
+
+    public static void printfindByAge(Persona[] personas,int inicio,int fin){
+        for(int i =0; i< personas.length;i++){
+            if(i>= inicio && i<=fin){
+                System.out.print(personas[i].getEdad()+"|");
+            }
+        }
+        System.out.println();
+    }
+
+    public static void printarregloByAge(Persona[] personas){
+        for(Persona people : personas){
+            System.out.println(people);
+        }
+        System.out.println();
     }
     
 }
