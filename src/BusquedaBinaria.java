@@ -26,6 +26,7 @@ public class BusquedaBinaria {
             System.out.print("valorMedio= " + personas[medio].getEdad() + " ");
             if(personas[medio].getEdad() == edad){
                 System.out.println("Encontrado");
+                System.out.println("La persona con la edad " + personas[medio].getEdad() +  " es " +personas[medio].getNombre());
                 return medio;
             }
             else if (personas[medio].getEdad()<edad){
